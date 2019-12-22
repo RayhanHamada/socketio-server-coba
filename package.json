@@ -1,0 +1,23 @@
+{
+  "name": "node_http_tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon --config",
+    "build": "./node_modules/.bin/tsc --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.21",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
