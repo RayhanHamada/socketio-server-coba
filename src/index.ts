@@ -7,6 +7,6 @@ app.get("/", (req, res) => {
   res.end();
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("Successfully listen")
 })
