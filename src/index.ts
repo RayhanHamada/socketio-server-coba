@@ -17,7 +17,7 @@ const PORT: number = 3000 || process.env.PORT;
 // });
 
 // use this plain line to initialize it, without express
-const io = socketio(PORT);
+const io = socketio(3000 || process.env.PORT);
 
 io.on("connect", socket => {
   console.log(`there's a socket of id ${socket.id} connected`);
