@@ -1,7 +1,7 @@
 import express from "express";
 import socketio from "socket.io";
 
-const PORT: number = 3000 || process.env.PORT || 80;
+const PORT: number = parseInt(process.env.PORT as string);
 
 // use this if you want also serve regular http request
 // const app = express();

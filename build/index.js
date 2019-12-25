@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const socket_io_1 = __importDefault(require("socket.io"));
-const PORT = 3000 || process.env.PORT || 80;
+const PORT = parseInt(process.env.PORT);
 // use this if you want also serve regular http request
 // const app = express();
 // const appServer = app.listen(PORT, () =>
