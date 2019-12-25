@@ -35,4 +35,8 @@ io.on("connection", (socket: socketio.Socket) => {
   socket.on("disconnect", data => {
     console.log(`socket with id of ${socket.id} is disconnected`);
   });
+
+  socket.on("sent", data => {
+    socket.emit("receive", data);
+  })
 });
