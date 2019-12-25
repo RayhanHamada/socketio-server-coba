@@ -1,7 +1,7 @@
 import express from "express";
 import socketio from "socket.io";
 
-const PORT: number = 3000 || process.env.PORT;
+const PORT: number = 3000 || process.env.PORT || 80;
 
 // use this if you want also serve regular http request
 // const app = express();
@@ -17,7 +17,7 @@ const PORT: number = 3000 || process.env.PORT;
 // });
 
 // use this plain line to initialize it, without express
-const io = socketio(3000 || process.env.PORT);
+const io = socketio(PORT);
 
 io.on("connect", socket => {
   console.log(`there's a socket of id ${socket.id} connected`);
@@ -34,6 +34,5 @@ io.on("connection", (socket: socketio.Socket) => {
 
   socket.on("disconnect", data => {
     console.log(`socket with id of ${socket.id} is disconnected`);
-    
   });
 });
