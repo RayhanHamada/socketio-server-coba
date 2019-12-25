@@ -3,12 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = express_1.default();
-app.get("/", (req, res) => {
-    console.log("successfully access this endpoint");
-    res.end();
+const http_1 = __importDefault(require("http"));
+const PORT = 3000 || parseInt(process.env.PORT);
+const server = http_1.default.createServer((req, res) => {
+    if (req.url === "/") {
+        console.log("you're in the home");
+    }
+    res.end("Rayhan Hamada");
 });
-app.listen(3000, () => {
-    console.log("Successfully listen");
-});
+server.listen(PORT, () => console.log(`server listening on port ${PORT}`));
