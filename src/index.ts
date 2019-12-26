@@ -38,5 +38,5 @@ io.on("connection", (socket: socketio.Socket) => {
 
   socket.on("sent", data => {
     socket.broadcast.emit("receive", data);
-  })
+  });
 });
