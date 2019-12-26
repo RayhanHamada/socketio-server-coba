@@ -37,6 +37,6 @@ io.on("connection", (socket: socketio.Socket) => {
   });
 
   socket.on("sent", data => {
-    socket.emit("receive", data);
+    socket.broadcast.emit("receive", data);
   })
 });
